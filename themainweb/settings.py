@@ -101,10 +101,10 @@ DATABASES = {
 '''
 
 
-import dj_database_url
-
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.config(
+        default='postgres://django_db_nktj_user:xbSDy723hQ9M3RqBrDOP2nqvx4PZmHnD@dpg-ckl75dgu1l6c73984bf0-a.ohio-postgres.render.com/django_db_nktj',
+    )
 }
 
 # Password validation
